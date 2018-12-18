@@ -9,7 +9,7 @@ var isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'developmen
 module.exports = function(options) {
   return function() {
     return multipipe(
-      gulp.src(options.src, {since: gulp.lastRun(options.since)}),
+      gulp.src(options.src),
       $.if(isDevelopment, $.sourcemaps.init()),
       $.sass().on('error', $.sass.logError),
       $.autoprefixer(),

@@ -13,7 +13,6 @@ function lazyRequireTask(taskName, path, options) {
 
 lazyRequireTask('styles', './gulp-tasks/styles.js', {
   src: 'frontend/styles/main.scss',
-  since: 'styles',
   dst: 'public/css'
 });
 
