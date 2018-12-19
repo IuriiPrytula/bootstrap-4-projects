@@ -45,6 +45,7 @@ gulp.task('watch', function() {
   gulp.watch('frontend/styles/**/*.scss', gulp.series('styles'));
   gulp.watch('frontend/assets/img/**/*.*', gulp.series('images'));
   gulp.watch('frontend/pages/**/*.pug', gulp.series('pug'));
+  gulp.watch('frontend/js/**/*.js', gulp.series('js'));
 });
 
 lazyRequireTask('serve', './gulp-tasks/serve.js', {

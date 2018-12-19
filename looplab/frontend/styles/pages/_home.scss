@@ -23,9 +23,29 @@
 
   .fa {
     color: $primary-color;
-    background-color: #fff;
+    background-color: $font-color;
     padding: 4px;
     border-radius: 5px;
-    font-size: $font-size;
+    font-size: $icon-size;
+  }
+}
+
+#explore-section, #share-section {
+  .fa {
+    color: $font-color;
+    background-color: $bg-color;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: $icon-size;
+  }
+}
+
+#create-section {
+  .fa {
+    color: $primary-color;
+    background-color: $font-color;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: $icon-size;
   }
 }
