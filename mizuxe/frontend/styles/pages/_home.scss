@@ -1,0 +1,18 @@
+#showcase {
+  background-image: linear-gradient(to right,  rgba(50, 146, 166, 0.8),  rgba(50, 146, 166, 0.8)), url("../img/mountains.jpg");
+  background-size: cover;
+}
+
+.info-header {
+  width: 50%;
+  margin: auto;
+  border-bottom: 1px #ddd solid;
+}
+
+.card-header {
+  h5 {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
