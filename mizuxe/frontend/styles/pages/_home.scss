@@ -16,3 +16,22 @@
     }
   }
 }
+
+#authors {
+  .fa {
+    font-size: 2rem;
+  }
+
+  .card {
+    transition: .3s;
+  }
+
+  .card:hover {
+    background-color: $primary-color;
+    color: #fff;
+
+    .fab {
+      color: #fff;
+    }
+  }
+}
