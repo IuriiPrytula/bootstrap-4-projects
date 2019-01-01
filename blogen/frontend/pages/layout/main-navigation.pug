@@ -1,0 +1,31 @@
+nav.navbar.navbar-expand-sm.navbar-dark.bg-dark.p-1
+  .container
+    a.navbar-brand.px-2(href="/") Blogen
+    button.navbar-toggler.mr-2(data-toggle="collapse", data-target="#navbarNav")
+      span.navbar-toggler-icon
+    .collapse.navbar-collapse#navbarNav
+      ul.navbar-nav
+        li.nav-item.px-2
+          a.nav-link.active(href="/") Dashboard
+        li.nav-item.px-2
+          a.nav-link(href="posts.html") Posts
+        li.nav-item.px-2
+          a.nav-link(href="categories.html") Categories
+        li.nav-item.px-2
+          a.nav-link(href="users.html") Users
+      ul.navbar-nav.ml-auto
+        li.nav-item.dropdown.mr-3
+          a.nav-link.dropdown-toggle(href="#", data-toggle="dropdown")
+            i.fa.fa-user.mr-1
+            |Welcome Iurii
+          .dropdown-menu.px-2
+            a.dropdown-item(href="profile.html")
+              i.fa.fa-user-circle.pr-1
+              |Profile
+            a.dropdown-item(href="settings.html")
+              i.fa.fa-cog.pr-1
+              |Settings
+        li.nav-item
+          a.nav-link(href="login.html")
+            i.fa.fa-user-times.mr-1
+            |Logout
