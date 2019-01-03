@@ -1,0 +1,18 @@
+.modal.fade#addCategoryModal
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header.bg-success.text-white
+        h5.modal-title Add category
+        btn.close(data-dismiss="modal")
+          span &times;
+      .modal-body
+        form(action="")
+          .form-group
+            label(for="categoryName") Category Name
+            input.form-control#categoryName(type="text", name="categoryName")
+          .form-group
+            label(for="categoryDescription") Category description
+            textarea.form-control#categoryDescription(name="editor2")
+      .modal-footer
+        button.btn.btn-secondary(data-dismiss="modal") Close
+        button.btn.btn-success(data-dismiss="modal") Save changes

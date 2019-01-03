@@ -1,0 +1,21 @@
+section#actions.py-4.mb-4.bg-light
+  .container
+    .row
+      .col-md-4
+        a.btn.btn-primary.btn-block(href="#", data-toggle="modal" data-target="#addPostModal") Add post
+          i.fa.fa-plus.ml-2
+      .col-md-4
+        a.btn.btn-success.btn-block(href="#", data-toggle="modal" data-target="#addCategoryModal") Add category
+          i.fa.fa-plus.ml-2
+      .col-md-4
+        a.btn.btn-warning.btn-block(href="#", data-toggle="modal" data-target="#addUserModal") Add user
+          i.fa.fa-plus.ml-2
+
+  // POST MODAL
+  include ../modals/post
+
+  // CATEGORY MODAL
+  include ../modals/category
+
+  // USER MODAL
+  include ../modals/user
