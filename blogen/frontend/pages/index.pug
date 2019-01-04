@@ -13,13 +13,45 @@ html(lang="en")
     include ./layout/main-navigation
     
     // HEADER
-    include ./layout/header
+    header#main-header.py-2.bg-primary.text-white
+      .container
+        .row
+          .col-md-6
+            h1
+              i.fa.fa-cog.pr-1
+              |Dashboard
 
     // ACTIONS
     include ./sections/actions
 
     // POSTS
-    include ./sections/posts
+    .container
+      .row
+        .col-md-9
+          include ./sections/posts
+        .col-md-3
+          .card.text-center.bg-primary.text-white.mb-3
+            .card-body
+              h3 Posts
+              h1.display-4
+                i.fas.fa-pencil-alt
+                |6
+              a.btn.btn-outline-light.btn-sm(href="posts.html") View
+          .card.text-center.bg-success.text-white.mb-3
+            .card-body
+              h3 Categories
+              h1.display-4
+                i.fas.fa-folder-open
+                |4
+              a.btn.btn-outline-light.btn-sm(href="categories.html") View
+          .card.text-center.bg-warning.text-white.mb-3
+            .card-body
+              h3 Users
+              h1.display-4
+                i.fas.fa-user
+                |2
+              a.btn.btn-outline-light.btn-sm(href="users.html") View
+
 
     // FOOTER
     include ./layout/footer
