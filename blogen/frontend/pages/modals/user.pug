@@ -1,0 +1,28 @@
+.modal.fade#addUserModal
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header.bg-warning.text-white
+        h5.modal-title Add user
+        btn.close(data-dismiss="modal")
+          span &times;
+      .modal-body
+        form(action="")
+          .form-group
+            label(for="userName") Name
+            input.form-control#userName(type="text", name="userName")
+          .form-group
+            label(for="userEmail") Email
+            input.form-control#userEmail(type="email", name="userEmail")
+          .form-group
+            label(for="userAvatar") User avatar
+            input.form-control-file#userAvatar(type="file", name="userAvatar")
+            small.form-text.text-muted Max size 1 mb
+          .form-group
+            label(for="userPassword") Password
+            input.form-control#userPassword(type="password", name="userPassword")
+          .form-group
+            label(for="userPasswordConfirm") Confirm password
+            input.form-control#userPasswordConfirm(type="password", name="userPasswordConfirm")
+      .modal-footer
+        button.btn.btn-secondary(data-dismiss="modal") Close
+        button.btn.btn-warning(data-dismiss="modal") Save changes

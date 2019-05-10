@@ -1,0 +1,20 @@
+.modal.fade.text-dark#contactModal
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h5.modal-title#contactModalTitle Contact Us
+        button.close(data-dismiss="modal")
+          span &times;
+      .modal-body
+        form(action="")
+          .form-group
+            label(for="name") Name
+            input.form-control(type="text")
+          .form-group
+            label(for="email") Email
+            input.form-control(type="email")
+          .form-group
+            label(for="message") Message
+            textarea.form-control
+      .modal-footer
+        button.btn.btn-primary.btn-block(type) Send

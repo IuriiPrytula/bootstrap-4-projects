@@ -1,0 +1,62 @@
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="css/main.css")
+    link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous")
+    link(rel="stylesheet", href="css/bootstrap.min.css")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Blogen admin area
+  body
+    // MAIN NAVIGATION
+    include ./layout/main-navigation
+    
+    // HEADER
+    header#posts-header.py-2.bg-primary.text-white
+      .container
+        .row
+          .col-md-6
+            h1
+              i.fas.fa-pencil-alt
+              |Posts
+    
+    //SEARCH
+    .container.mt-4
+      .row
+        .col-md-6.ml-auto
+          .input-group
+            input.form-control(type="text", placeholder="Search")
+            div.input-group-append
+              button.btn.btn-primary Search
+
+    // POSTS
+    section.mt-4
+      .container
+        .row
+          .col
+            include ./sections/posts
+
+    // PAGINATION
+    .container
+      nav(aria-label='Page navigation example')
+        ul.pagination.mt-4
+          li.page-item
+            a.page-link(href='#') Previous
+          li.page-item
+            a.page-link(href='#') 1
+          li.page-item
+            a.page-link(href='#') 2
+          li.page-item
+            a.page-link(href='#') 3
+          li.page-item
+            a.page-link(href='#') Next
+
+
+    include ./layout/footer
+
+
+    script(src="./js/jquery.min.js")
+    script(src="./js/popper.min.js")
+    script(src="./js/bootstrap.min.js")
+    script(src="./js/main.js")
+    script(src="https://cdn.ckeditor.com/4.11.1/standard/ckeditor.js")

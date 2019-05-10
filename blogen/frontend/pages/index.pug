@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="css/main.css")
+    link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous")
+    link(rel="stylesheet", href="css/bootstrap.min.css")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Blogen admin area
+  body
+    // MAIN NAVIGATION
+    include ./layout/main-navigation
+    
+    // HEADER
+    header#main-header.py-2.bg-primary.text-white
+      .container
+        .row
+          .col-md-6
+            h1
+              i.fa.fa-cog.pr-1
+              |Dashboard
+
+    // ACTIONS
+    include ./sections/actions
+
+    // POSTS
+    .container
+      .row
+        .col-md-9
+          include ./sections/posts
+        .col-md-3
+          .card.text-center.bg-primary.text-white.mb-3
+            .card-body
+              h3 Posts
+              h1.display-4
+                i.fas.fa-pencil-alt
+                |6
+              a.btn.btn-outline-light.btn-sm(href="posts.html") View
+          .card.text-center.bg-success.text-white.mb-3
+            .card-body
+              h3 Categories
+              h1.display-4
+                i.fas.fa-folder-open
+                |4
+              a.btn.btn-outline-light.btn-sm(href="categories.html") View
+          .card.text-center.bg-warning.text-white.mb-3
+            .card-body
+              h3 Users
+              h1.display-4
+                i.fas.fa-user
+                |2
+              a.btn.btn-outline-light.btn-sm(href="users.html") View
+
+
+    // FOOTER
+    include ./layout/footer
+
+
+    script(src="./js/jquery.min.js")
+    script(src="./js/popper.min.js")
+    script(src="./js/bootstrap.min.js")
+    script(src="./js/main.js")
+    script(src="https://cdn.ckeditor.com/4.11.1/standard/ckeditor.js")
+    script.
+      CKEDITOR.replace("editor1");
+      CKEDITOR.replace("editor2");

@@ -1,0 +1,29 @@
+.modal.fade#addPostModal
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header.bg-primary.text-white
+        h5.modal-title Add post
+        btn.close(data-dismiss="modal")
+          span &times;
+      .modal-body
+        form(action="")
+          .form-group
+            label(for="title") Title
+            input.form-control#title(type="text", name="title")
+          .form-group
+            label(for="category") Category
+            select.form-control#category(type="text", name="category")
+              option(value="") Web Development
+              option(value="") Tech Gadgets
+              options(value="") Business
+              option(value="") Health & Wellness
+          .form-group
+            label(for="file") Image upload
+            input.form-control-file#file(type="file", name="file")
+            small.form-text.text-muted Max size 3 mb
+          .form-group
+            label(for="body") Body
+            textarea.form-control#body(name="editor1")
+      .modal-footer
+        button.btn.btn-secondary(data-dismiss="modal") Close
+        button.btn.btn-primary(data-dismiss="modal") Save changes

@@ -33,13 +33,19 @@ lazyRequireTask('images', './gulp-tasks/images.js', {
   dst: 'public/img'
 });
 
+lazyRequireTask('fonts', './gulp-tasks/images.js', {
+  src: 'frontend/assets/fonts/**/*.*',
+  since: 'fonts',
+  dst: 'public/fonts'
+});
+
 lazyRequireTask('js', './gulp-tasks/js.js', {
   src: 'frontend/js/**/*.js',
   since: 'js',
   dst: 'public/js'
 });
 
-gulp.task('build:all', gulp.series('clean', gulp.parallel('pug', 'styles','js' ,'images')));
+gulp.task('build:all', gulp.series('clean', gulp.parallel('pug', 'styles','js' ,'images', 'fonts')));
 
 gulp.task('watch', function() {
   gulp.watch('frontend/styles/**/*.scss', gulp.series('styles'));
